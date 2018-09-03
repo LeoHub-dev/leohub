@@ -12,8 +12,11 @@
  */
 
 Route::get('/', 'HomeController@index');
+Route::get('/admin/panel', 'App\PanelController@index');
 
 Auth::routes();
+
+Route::resource('/users', 'Api\UserController', ['only' => ['index','update','destroy']]);
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebook');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookCallback');

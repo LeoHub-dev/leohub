@@ -17,8 +17,8 @@ const app = new Vue({
 });*/
 var laravel = {
     initialize: function() {
-        this.methodLinks = $('a[data-method]');
-        this.token = $('a[data-token]');
+        this.methodLinks = $('.action-link[data-method]');
+        this.token = $('.action-link[data-token]');
         this.registerEvents();
     },
     registerEvents: function() {
