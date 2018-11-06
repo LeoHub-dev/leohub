@@ -11,11 +11,31 @@
 |
  */
 
+
+
 Route::get('/', 'HomeController@index');
-Route::get('/admin/panel', 'App\PanelController@index');
+
+Route::post('/contact', 'HomeController@contact');
 
 Auth::routes();
 
+Route::group(['prefix' => 'app', 'namespace' => 'App', 'middleware' => ['auth']], function () {
+
+    Route::get('/', function() {
+        return redirect('/app/dashboard');
+    });
+
+    
+
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+    Route::group(['middleware' => ['role:owner']], function () {
+        Route::get('/panel', 'PanelController@index');
+    });
+
+});
+
+/*
 Route::resource('/users', 'Api\UserController', ['only' => ['index','update','destroy']]);
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebook');
@@ -58,6 +78,6 @@ Route::group(['prefix' => 'app', 'namespace' => 'App', 'middleware' => ['auth']]
         Route::resource('user', 'BlogController'); //Make a CRUD controller
     });
 });
-
+*/
 
 

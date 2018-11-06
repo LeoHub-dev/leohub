@@ -21,10 +21,17 @@
 
   <!-- Custom CSS -->
   <link href="{{ asset('leohub/css/stylish-portfolio.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('leohub/css/animate.css') }}" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
 </head>
 
 <body id="page-top">
+
+  <div class="se-pre-con"></div>
+
+  @include('flash::message')
 
   <!-- Navigation -->
   <a class="menu-toggle rounded" href="#">
@@ -33,7 +40,7 @@
   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="js-scroll-trigger" href="#page-top">LeoHub</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#page-top">Home</a>
@@ -56,11 +63,11 @@
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <h1 class="mb-1">LeoHub</h1>
+      <h1 class="mb-1 wow fadeIn">LeoHub</h1>
       <h3 class="mb-5">
         <em>Portfolio Online</em>
       </h3>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Descubrir mas</a>
+      <a class="btn btn-primary btn-xl js-scroll-trigger animated infinite pulse" href="#about">Descubrir mas</a>
     </div>
     <div class="overlay"></div>
   </header>
@@ -70,9 +77,9 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <h2>LeoHub es </h2>
-          <p class="lead mb-5">un lugar donde puedes realizar tus grandes ideas, y lograr tus metas!</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Que ofrecemos?</a>
+          <h2 class="wow fadeIn">LeoHub es </h2>
+          <p class="lead mb-5 wow fadeIn">un lugar donde puedes realizar tus grandes ideas, y lograr tus metas!</p>
+          <div class="wow fadeIn delay-1s"><a class="btn btn-dark btn-xl js-scroll-trigger wow infinite pulse" href="#services">Que ofrecemos?</a></div>
         </div>
       </div>
     </div>
@@ -83,10 +90,10 @@
     <div class="container">
       <div class="content-section-heading">
         <h3 class="text-secondary mb-0">Servicios</h3>
-        <h2 class="mb-5">Que ofrecemos?</h2>
+        <h2 class="mb-5 wow wobble">Que ofrecemos?</h2>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 wow fadeIn">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-screen-smartphone"></i>
           </span>
@@ -95,7 +102,7 @@
           </h4>
           <p class="text-faded mb-0">Paginas Web visible desde cualquier dispositivo!</p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 wow fadeIn delay-1s">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-pencil"></i>
           </span>
@@ -104,7 +111,7 @@
           </h4>
           <p class="text-faded mb-0">Proyectos a la medida.</p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0 wow fadeIn delay-2s">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-like"></i>
           </span>
@@ -113,8 +120,8 @@
           </h4>
           <p class="text-faded mb-0">La mejor experiencia para tus usuarios!</p>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <span class="service-icon rounded-circle mx-auto mb-3">
+        <div class="col-lg-3 col-md-6 wow fadeIn delay-3s">
+          <span class="service-icon rounded-circle mx-auto mb-3 ">
             <i class="icon-mustache"></i>
           </span>
           <h4>
@@ -129,10 +136,10 @@
   <!-- Callout -->
   <section class="callout">
     <div class="container text-center">
-      <h2 class="mx-auto mb-5">Construimos
+      <h2 class="mx-auto mb-5 wow slideInUp">Construimos
         <em>tu</em>
         proximo proyecto!</h2>
-      <a class="btn btn-primary btn-xl" href="#contact">Contactanos</a>
+      <a class="btn btn-primary btn-xl wow infinite pulse" href="#contact">Contactanos</a>
     </div>
   </section>
 
@@ -269,7 +276,7 @@
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="#" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>SocialRobot</h2>
@@ -280,7 +287,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="{{ asset('leohub/img/tradingcoin.png') }}" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>TradingCoin</h2>
@@ -288,44 +295,44 @@
                   y Wallet para Android</p>
               </span>
             </span>
-            <img class="img-fluid" src="{{ asset('leohub/img/portfolio-2.jpg') }}" alt="">
+            <img class="img-fluid" src="{{ asset('leohub/img/tradingcoin-portfolio.jpg') }}" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="{{ asset('leohub/img/academiadetrading.png') }}" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Academia De Trading</h2>
                 <p class="mb-0">Pagina Web dedicada a dar clases sobre Trading de Criptomonedas. Y el trading en general.</p>
               </span>
             </span>
-            <img class="img-fluid" src="{{ asset('leohub/img/portfolio-3.jpg') }}" alt="">
+            <img class="img-fluid" src="{{ asset('leohub/img/academia-portfolio.jpg') }}" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="{{ asset('leohub/img/only1week.png') }}" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Multinivel Avanzado</h2>
                 <p class="mb-0">Pagina con un multinivel bastante interesante.</p>
               </span>
             </span>
-            <img class="img-fluid" src="{{ asset('leohub/img/portfolio-4.jpg') }}" alt="">
+            <img class="img-fluid" src="{{ asset('leohub/img/only1week-portfolio.jpg') }}" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="{{ asset('leohub/img/followuseller.png') }}" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>FollowYourSeller</h2>
                 <p class="mb-0">Una pagina que se uso junto una APP para el rastreo de proveedores, usando APIs de google Maps</p>
               </span>
             </span>
-            <img class="img-fluid" src="{{ asset('leohub/img/portfolio-4.jpg') }}" alt="">
+            <img class="img-fluid" src="{{ asset('leohub/img/followuseller-portfolio.jpg') }}" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="#" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Key Store</h2>
@@ -336,7 +343,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="#" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Leo Reservaciones</h2>
@@ -347,7 +354,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="{{ asset('leohub/img/3brothersny.png') }}" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Pizzeria</h2>
@@ -368,34 +375,37 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="content-section bg-primary text-white">
+  <section id="contact" style="padding-top: 5rem;" class="content-section bg-primary text-white">
     <div class="container">
       <div class="content-section-heading text-center">
         <h2 class="mb-5">Contactanos</h2>
       </div>
-      <form>
-      <div class="form-group">
-          <label for="exampleInputEmail1">Nombre</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu nombre">
+      <form action="{{ url('contact') }}" method="POST">
+
+        @csrf
+      
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="name">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="Ingresa tu email" name="email">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label>Mensaje</label>
+          <textarea class="form-control" rows="3" name="message"></textarea>
         </div>
 
         <button type="submit" class="btn btn-xl btn-light mr-4">Enviar</button>
-      </form>
+      {{ Form::close() }}
 
     </div>
 
   </section>
 
   <!-- Map -->
-  <section id="contact" class="map">
+  <section  class="map">
     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
     <br/>
     <small>
@@ -441,6 +451,22 @@
 
   <!-- Custom scripts for this template -->
   <script src="{{ asset('leohub/js/stylish-portfolio.min.js') }}"></script>
+
+  <script src="{{ asset('leohub/js/wow.min.js') }}"></script>
+
+
+
+  <script>
+    $( document ).ready(function() {
+
+      new WOW().init();
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");;
+
+      $('#flash-overlay-modal').modal();
+
+    });
+  </script>
 
 </body>
 

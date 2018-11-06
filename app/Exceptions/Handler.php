@@ -44,8 +44,31 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Exception $e)
     {
-        return parent::render($request, $exception);
+        /*if ($exception instanceof HttpException && $exception->getStatusCode() == 403) {
+            return redirect('/app/dashboard');
+        }*/
+
+
+
+        if ($e instanceof \Symfony\Component\HttpKernel\Exception\HttpException) {
+            //var_dump("hello");
+
+            $statusCode = $e->getStatusCode();
+
+            if (view()->exists('errors.'.$statusCode)) {
+                return response(view('errors.'.$statusCode, [
+                    'msg' => $e->getMessage(), 
+                    'code' => $statusCode
+                ]), $statusCode);
+            }
+            else
+            {
+                //return redirect('/app/dashboard');
+            }
+        }
+
+        return parent::render($request, $e);
     }
 }

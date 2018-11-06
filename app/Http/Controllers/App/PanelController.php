@@ -9,7 +9,7 @@ use App\User;
 
 class PanelController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
     	$title = 'Inicio';
     	$users = User::paginate(20);
