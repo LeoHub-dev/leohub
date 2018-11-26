@@ -10,6 +10,13 @@
 
   <title>LeoHub - Realizamos tus ideas</title>
 
+  <meta property="og:title" content="LeoHub - Realizamos tus ideas"/>
+  <meta property="og:type" content="company"/>
+  <meta property="og:url" content="{{ url('/') }}"/>
+  <meta property="og:image" content="{{ asset('leohub/img/leohub.png') }}"/>
+  <meta property="og:description"
+          content="LeoHub es un lugar donde puedes realizar tus grandes ideas, y lograr tus metas!"/>
+
   <!-- Bootstrap Core CSS -->
   <link href="{{ asset('leohub/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -404,31 +411,26 @@
 
   </section>
 
-  <!-- Map -->
+  <!-- Map 
   <section  class="map">
     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
     <br/>
     <small>
       <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
     </small>
-  </section>
+  </section>-->
 
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
       <ul class="list-inline mb-5">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/LeoHubWeb/">
             <i class="icon-social-facebook"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#">
+          <a class="social-link rounded-circle text-white" href="https://github.com/LeoHub-dev">
             <i class="icon-social-github"></i>
           </a>
         </li>
